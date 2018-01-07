@@ -11,10 +11,15 @@
 		1C212B7A2001C56000CBD8C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B752001C56000CBD8C9 /* AppDelegate.m */; };
 		1C212B812001C58900CBD8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7C2001C58900CBD8C9 /* Assets.xcassets */; };
 		1C212B822001C58900CBD8C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7D2001C58900CBD8C9 /* MainMenu.xib */; };
-		1C212B832001C58900CBD8C9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7F2001C58900CBD8C9 /* Info.plist */; };
 		1C212B882001C7BE00CBD8C9 /* PPProcessFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B872001C7BE00CBD8C9 /* PPProcessFetcher.m */; };
 		1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */; };
 		1C212B8F2001D7B900CBD8C9 /* PPProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B8E2001D7B900CBD8C9 /* PPProcessManager.m */; };
+		1C212B922002B1E500CBD8C9 /* PPProcessListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B912002B1E500CBD8C9 /* PPProcessListWindowController.m */; };
+		1C212B962002B54800CBD8C9 /* PPProcessListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B942002B54800CBD8C9 /* PPProcessListViewController.m */; };
+		1C212B972002B54800CBD8C9 /* PPProcessListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B952002B54800CBD8C9 /* PPProcessListViewController.xib */; };
+		1C212B9A2002BA3C00CBD8C9 /* PPAppFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B992002BA3C00CBD8C9 /* PPAppFacade.m */; };
+		1C212BAB2002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212BA82002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m */; };
+		1C212BAC2002C1D300CBD8C9 /* NSView+LayoutConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212BAA2002C1D300CBD8C9 /* NSView+LayoutConstraints.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,18 @@
 		1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessInfo.m; sourceTree = "<group>"; };
 		1C212B8D2001D7B900CBD8C9 /* PPProcessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessManager.h; sourceTree = "<group>"; };
 		1C212B8E2001D7B900CBD8C9 /* PPProcessManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessManager.m; sourceTree = "<group>"; };
+		1C212B902002B1E500CBD8C9 /* PPProcessListWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessListWindowController.h; sourceTree = "<group>"; };
+		1C212B912002B1E500CBD8C9 /* PPProcessListWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessListWindowController.m; sourceTree = "<group>"; };
+		1C212B932002B54800CBD8C9 /* PPProcessListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessListViewController.h; sourceTree = "<group>"; };
+		1C212B942002B54800CBD8C9 /* PPProcessListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessListViewController.m; sourceTree = "<group>"; };
+		1C212B952002B54800CBD8C9 /* PPProcessListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPProcessListViewController.xib; sourceTree = "<group>"; };
+		1C212B982002BA3C00CBD8C9 /* PPAppFacade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppFacade.h; sourceTree = "<group>"; };
+		1C212B992002BA3C00CBD8C9 /* PPAppFacade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppFacade.m; sourceTree = "<group>"; };
+		1C212BA62002C1D300CBD8C9 /* Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Autolayout.h; sourceTree = "<group>"; };
+		1C212BA72002C1D300CBD8C9 /* NSLayoutConstraint+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+Additions.h"; sourceTree = "<group>"; };
+		1C212BA82002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Additions.m"; sourceTree = "<group>"; };
+		1C212BA92002C1D300CBD8C9 /* NSView+LayoutConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+LayoutConstraints.h"; sourceTree = "<group>"; };
+		1C212BAA2002C1D300CBD8C9 /* NSView+LayoutConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LayoutConstraints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +96,7 @@
 				1C212B762001C56000CBD8C9 /* Business */,
 				1C212B772001C56000CBD8C9 /* Model */,
 				1C212B782001C56000CBD8C9 /* UI */,
+				1C212BA42002C1D300CBD8C9 /* ThirdParty */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -111,6 +129,11 @@
 		1C212B792001C56000CBD8C9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C212B902002B1E500CBD8C9 /* PPProcessListWindowController.h */,
+				1C212B912002B1E500CBD8C9 /* PPProcessListWindowController.m */,
+				1C212B932002B54800CBD8C9 /* PPProcessListViewController.h */,
+				1C212B942002B54800CBD8C9 /* PPProcessListViewController.m */,
+				1C212B952002B54800CBD8C9 /* PPProcessListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +152,8 @@
 		1C212B842001C79700CBD8C9 /* AppFacade */ = {
 			isa = PBXGroup;
 			children = (
+				1C212B982002BA3C00CBD8C9 /* PPAppFacade.h */,
+				1C212B992002BA3C00CBD8C9 /* PPAppFacade.m */,
 			);
 			path = AppFacade;
 			sourceTree = "<group>";
@@ -151,6 +176,26 @@
 				1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */,
 			);
 			path = ProcessInfo;
+			sourceTree = "<group>";
+		};
+		1C212BA42002C1D300CBD8C9 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				1C212BA52002C1D300CBD8C9 /* Autolayout */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		1C212BA52002C1D300CBD8C9 /* Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				1C212BA62002C1D300CBD8C9 /* Autolayout.h */,
+				1C212BA72002C1D300CBD8C9 /* NSLayoutConstraint+Additions.h */,
+				1C212BA82002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m */,
+				1C212BA92002C1D300CBD8C9 /* NSView+LayoutConstraints.h */,
+				1C212BAA2002C1D300CBD8C9 /* NSView+LayoutConstraints.m */,
+			);
+			path = Autolayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C212B812001C58900CBD8C9 /* Assets.xcassets in Resources */,
-				1C212B832001C58900CBD8C9 /* Info.plist in Resources */,
+				1C212B972002B54800CBD8C9 /* PPProcessListViewController.xib in Resources */,
 				1C212B822001C58900CBD8C9 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,9 +270,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C212B6B2001BBF800CBD8C9 /* main.m in Sources */,
+				1C212B922002B1E500CBD8C9 /* PPProcessListWindowController.m in Sources */,
+				1C212B962002B54800CBD8C9 /* PPProcessListViewController.m in Sources */,
 				1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */,
 				1C212B7A2001C56000CBD8C9 /* AppDelegate.m in Sources */,
+				1C212B9A2002BA3C00CBD8C9 /* PPAppFacade.m in Sources */,
+				1C212BAB2002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m in Sources */,
 				1C212B882001C7BE00CBD8C9 /* PPProcessFetcher.m in Sources */,
+				1C212BAC2002C1D300CBD8C9 /* NSView+LayoutConstraints.m in Sources */,
 				1C212B8F2001D7B900CBD8C9 /* PPProcessManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

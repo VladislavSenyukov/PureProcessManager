@@ -1,13 +1,13 @@
 //
-//  AppDelegate.h
+//  PPProcessListViewController.h
 //  PureProcessManager
 //
 //  Created by Vladislav Senyukov on 07.01.18.
 //  Copyright © 2018 Vladislav Senyukov. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
-#import "PPAppFacade.h"
+#import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, PPFacadeRetainable>
+@interface PPProcessListViewController : NSViewController
+
 @end

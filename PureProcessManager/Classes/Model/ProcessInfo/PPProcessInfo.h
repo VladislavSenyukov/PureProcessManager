@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PPProcessInfo : NSObject
-@property (nonatomic, assign) int processID;
+@property (nonatomic, strong) NSNumber *processID;
 @property (nonatomic, strong) NSString *processName;
 @property (nonatomic, strong) NSString *ownerName;
 @end

@@ -25,7 +25,7 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount);
         kinfo_proc *process = &processList[i];
         PPProcessInfo *processInfo = [PPProcessInfo new];
         int processID = process->kp_proc.p_pid;
-        processInfo.processID = processID;
+        processInfo.processID = [NSNumber numberWithInt:processID];
         // At first a process name is being evaluated by its path. This approach is used because a BSD info structure has only 17 chars to write a process name to, and it often gets truncated
         int maxProcPathLength = 500; // this path length seems to be enough to store a process name at the end
         char *bufferProcPath = calloc(maxProcPathLength, sizeof(char*));

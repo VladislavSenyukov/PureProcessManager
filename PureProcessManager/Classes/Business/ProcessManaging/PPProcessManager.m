@@ -37,7 +37,7 @@
 
 - (void)killProcessWithInfo:(PPProcessInfo *)info {
     if (info) {
-        int result = kill(info.processID, SIGTERM);
+        int result = kill(info.processID.intValue, SIGTERM);
         if (result == EPERM) {
             NSLog(@"The process does not have permission to send the signal to any of the target processes.");
         }

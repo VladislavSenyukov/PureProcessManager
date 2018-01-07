@@ -22,5 +22,6 @@
 
 - (void)startUpdatingProcessList;
 - (void)stopUpdatingProcessList;
+- (void)killProcessWithInfo:(PPProcessInfo*)info;
 
 @end

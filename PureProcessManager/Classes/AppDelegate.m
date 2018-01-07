@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate () <PPProcessManagerDelegate>
+@interface AppDelegate ()
 @property (weak) IBOutlet NSWindow *window;
 @end
 

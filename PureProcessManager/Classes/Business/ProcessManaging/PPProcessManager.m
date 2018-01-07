@@ -28,14 +28,35 @@
 
 - (void)startUpdatingProcessList {
     [self fetchProcessList];
-    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateInterval target:self selector:@selector(fetchProcessList) userInfo:nil repeats:YES];
+    [self startUpdateTimer];
 }
 
 - (void)stopUpdatingProcessList {
-    [self.updateTimer invalidate];
+    [self stopUpdateTimer];
+}
+
+- (void)killProcessWithInfo:(PPProcessInfo *)info {
+    if (info) {
+        int result = kill(info.processID, SIGTERM);
+        if (result == EPERM) {
+            NSLog(@"The process does not have permission to send the signal to any of the target processes.");
+        }
+    }
 }
 
 #pragma mark - Private
+
+- (void)startUpdateTimer {
+        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateInterval
+                                                            target:self
+                                                          selector:@selector(fetchProcessList)
+                                                          userInfo:nil
+                                                           repeats:YES];
+}
+
+- (void)stopUpdateTimer {
+    [self.updateTimer invalidate];
+}
 
 - (void)fetchProcessList {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{

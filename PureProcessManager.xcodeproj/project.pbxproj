@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C212B632001BBF800CBD8C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B622001BBF800CBD8C9 /* AppDelegate.m */; };
-		1C212B652001BBF800CBD8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B642001BBF800CBD8C9 /* Assets.xcassets */; };
-		1C212B682001BBF800CBD8C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B662001BBF800CBD8C9 /* MainMenu.xib */; };
 		1C212B6B2001BBF800CBD8C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B6A2001BBF800CBD8C9 /* main.m */; };
+		1C212B7A2001C56000CBD8C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B752001C56000CBD8C9 /* AppDelegate.m */; };
+		1C212B812001C58900CBD8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7C2001C58900CBD8C9 /* Assets.xcassets */; };
+		1C212B822001C58900CBD8C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7D2001C58900CBD8C9 /* MainMenu.xib */; };
+		1C212B832001C58900CBD8C9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C212B7F2001C58900CBD8C9 /* Info.plist */; };
+		1C212B882001C7BE00CBD8C9 /* PPProcessFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B872001C7BE00CBD8C9 /* PPProcessFetcher.m */; };
+		1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */; };
+		1C212B8F2001D7B900CBD8C9 /* PPProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B8E2001D7B900CBD8C9 /* PPProcessManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C212B5E2001BBF800CBD8C9 /* PureProcessManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureProcessManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C212B612001BBF800CBD8C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C212B622001BBF800CBD8C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C212B642001BBF800CBD8C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C212B672001BBF800CBD8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1C212B692001BBF800CBD8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C212B6A2001BBF800CBD8C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C212B6C2001BBF800CBD8C9 /* PureProcessManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PureProcessManager.entitlements; sourceTree = "<group>"; };
+		1C212B742001C56000CBD8C9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1C212B752001C56000CBD8C9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1C212B7C2001C58900CBD8C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C212B7E2001C58900CBD8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1C212B7F2001C58900CBD8C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C212B802001C58900CBD8C9 /* PureProcessManager.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PureProcessManager.entitlements; sourceTree = "<group>"; };
+		1C212B862001C7BE00CBD8C9 /* PPProcessFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessFetcher.h; sourceTree = "<group>"; };
+		1C212B872001C7BE00CBD8C9 /* PPProcessFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessFetcher.m; sourceTree = "<group>"; };
+		1C212B8A2001C7EF00CBD8C9 /* PPProcessInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessInfo.h; sourceTree = "<group>"; };
+		1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessInfo.m; sourceTree = "<group>"; };
+		1C212B8D2001D7B900CBD8C9 /* PPProcessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPProcessManager.h; sourceTree = "<group>"; };
+		1C212B8E2001D7B900CBD8C9 /* PPProcessManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPProcessManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,15 +64,93 @@
 		1C212B602001BBF800CBD8C9 /* PureProcessManager */ = {
 			isa = PBXGroup;
 			children = (
-				1C212B612001BBF800CBD8C9 /* AppDelegate.h */,
-				1C212B622001BBF800CBD8C9 /* AppDelegate.m */,
-				1C212B642001BBF800CBD8C9 /* Assets.xcassets */,
-				1C212B662001BBF800CBD8C9 /* MainMenu.xib */,
-				1C212B692001BBF800CBD8C9 /* Info.plist */,
+				1C212B7B2001C58900CBD8C9 /* Resources */,
+				1C212B732001C56000CBD8C9 /* Classes */,
 				1C212B6A2001BBF800CBD8C9 /* main.m */,
-				1C212B6C2001BBF800CBD8C9 /* PureProcessManager.entitlements */,
 			);
 			path = PureProcessManager;
+			sourceTree = "<group>";
+		};
+		1C212B732001C56000CBD8C9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B742001C56000CBD8C9 /* AppDelegate.h */,
+				1C212B752001C56000CBD8C9 /* AppDelegate.m */,
+				1C212B762001C56000CBD8C9 /* Business */,
+				1C212B772001C56000CBD8C9 /* Model */,
+				1C212B782001C56000CBD8C9 /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1C212B762001C56000CBD8C9 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B842001C79700CBD8C9 /* AppFacade */,
+				1C212B852001C79700CBD8C9 /* ProcessManaging */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		1C212B772001C56000CBD8C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B892001C7E300CBD8C9 /* ProcessInfo */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C212B782001C56000CBD8C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B792001C56000CBD8C9 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1C212B792001C56000CBD8C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1C212B7B2001C58900CBD8C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B7C2001C58900CBD8C9 /* Assets.xcassets */,
+				1C212B7D2001C58900CBD8C9 /* MainMenu.xib */,
+				1C212B7F2001C58900CBD8C9 /* Info.plist */,
+				1C212B802001C58900CBD8C9 /* PureProcessManager.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C212B842001C79700CBD8C9 /* AppFacade */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppFacade;
+			sourceTree = "<group>";
+		};
+		1C212B852001C79700CBD8C9 /* ProcessManaging */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B8D2001D7B900CBD8C9 /* PPProcessManager.h */,
+				1C212B8E2001D7B900CBD8C9 /* PPProcessManager.m */,
+				1C212B862001C7BE00CBD8C9 /* PPProcessFetcher.h */,
+				1C212B872001C7BE00CBD8C9 /* PPProcessFetcher.m */,
+			);
+			path = ProcessManaging;
+			sourceTree = "<group>";
+		};
+		1C212B892001C7E300CBD8C9 /* ProcessInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1C212B8A2001C7EF00CBD8C9 /* PPProcessInfo.h */,
+				1C212B8B2001C7EF00CBD8C9 /* PPProcessInfo.m */,
+			);
+			path = ProcessInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C212B652001BBF800CBD8C9 /* Assets.xcassets in Resources */,
-				1C212B682001BBF800CBD8C9 /* MainMenu.xib in Resources */,
+				1C212B812001C58900CBD8C9 /* Assets.xcassets in Resources */,
+				1C212B832001C58900CBD8C9 /* Info.plist in Resources */,
+				1C212B822001C58900CBD8C9 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,17 +225,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C212B6B2001BBF800CBD8C9 /* main.m in Sources */,
-				1C212B632001BBF800CBD8C9 /* AppDelegate.m in Sources */,
+				1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */,
+				1C212B7A2001C56000CBD8C9 /* AppDelegate.m in Sources */,
+				1C212B882001C7BE00CBD8C9 /* PPProcessFetcher.m in Sources */,
+				1C212B8F2001D7B900CBD8C9 /* PPProcessManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C212B662001BBF800CBD8C9 /* MainMenu.xib */ = {
+		1C212B7D2001C58900CBD8C9 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1C212B672001BBF800CBD8C9 /* Base */,
+				1C212B7E2001C58900CBD8C9 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -261,12 +353,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PureProcessManager/PureProcessManager.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PureProcessManager/Resources/PureProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVHW8QUG2S;
-				INFOPLIST_FILE = PureProcessManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PureProcessManager/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruckef.PureProcessManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -276,12 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PureProcessManager/PureProcessManager.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PureProcessManager/Resources/PureProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVHW8QUG2S;
-				INFOPLIST_FILE = PureProcessManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PureProcessManager/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruckef.PureProcessManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

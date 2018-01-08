@@ -10,4 +10,8 @@
 
 @implementation PPProcessInfo
 
+- (BOOL)isEqual:(PPProcessInfo*)object {
+    return [self.processID intValue] == [object.processID intValue];
+}
+
 @end

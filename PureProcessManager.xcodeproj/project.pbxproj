@@ -20,6 +20,9 @@
 		1C212B9A2002BA3C00CBD8C9 /* PPAppFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212B992002BA3C00CBD8C9 /* PPAppFacade.m */; };
 		1C212BAB2002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212BA82002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m */; };
 		1C212BAC2002C1D300CBD8C9 /* NSView+LayoutConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C212BAA2002C1D300CBD8C9 /* NSView+LayoutConstraints.m */; };
+		1C9A1C682003DE2F002904C1 /* PPAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C672003DE2F002904C1 /* PPAuthorizationManager.m */; };
+		1C9A1C6E2003DE88002904C1 /* PPAuthorizedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C6D2003DE88002904C1 /* PPAuthorizedTask.m */; };
+		1C9A1C712003DE9A002904C1 /* PPAuthorizedRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C702003DE9A002904C1 /* PPAuthorizedRight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,13 @@
 		1C212BA82002C1D300CBD8C9 /* NSLayoutConstraint+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+Additions.m"; sourceTree = "<group>"; };
 		1C212BA92002C1D300CBD8C9 /* NSView+LayoutConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+LayoutConstraints.h"; sourceTree = "<group>"; };
 		1C212BAA2002C1D300CBD8C9 /* NSView+LayoutConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LayoutConstraints.m"; sourceTree = "<group>"; };
+		1C9A1C662003DE2F002904C1 /* PPAuthorizationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAuthorizationManager.h; sourceTree = "<group>"; };
+		1C9A1C672003DE2F002904C1 /* PPAuthorizationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAuthorizationManager.m; sourceTree = "<group>"; };
+		1C9A1C6C2003DE88002904C1 /* PPAuthorizedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAuthorizedTask.h; sourceTree = "<group>"; };
+		1C9A1C6D2003DE88002904C1 /* PPAuthorizedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAuthorizedTask.m; sourceTree = "<group>"; };
+		1C9A1C6F2003DE9A002904C1 /* PPAuthorizedRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAuthorizedRight.h; sourceTree = "<group>"; };
+		1C9A1C702003DE9A002904C1 /* PPAuthorizedRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAuthorizedRight.m; sourceTree = "<group>"; };
+		1C9A1C732003E5A8002904C1 /* PPDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDefinitions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1C212B842001C79700CBD8C9 /* AppFacade */,
+				1C9A1C652003DDD7002904C1 /* AuthorizedTasksManaging */,
 				1C212B852001C79700CBD8C9 /* ProcessManaging */,
 			);
 			path = Business;
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				1C212B892001C7E300CBD8C9 /* ProcessInfo */,
+				1C9A1C732003E5A8002904C1 /* PPDefinitions.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +210,19 @@
 			path = Autolayout;
 			sourceTree = "<group>";
 		};
+		1C9A1C652003DDD7002904C1 /* AuthorizedTasksManaging */ = {
+			isa = PBXGroup;
+			children = (
+				1C9A1C662003DE2F002904C1 /* PPAuthorizationManager.h */,
+				1C9A1C672003DE2F002904C1 /* PPAuthorizationManager.m */,
+				1C9A1C6F2003DE9A002904C1 /* PPAuthorizedRight.h */,
+				1C9A1C702003DE9A002904C1 /* PPAuthorizedRight.m */,
+				1C9A1C6C2003DE88002904C1 /* PPAuthorizedTask.h */,
+				1C9A1C6D2003DE88002904C1 /* PPAuthorizedTask.m */,
+			);
+			path = AuthorizedTasksManaging;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +255,11 @@
 					1C212B5D2001BBF800CBD8C9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -270,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C212B6B2001BBF800CBD8C9 /* main.m in Sources */,
+				1C9A1C712003DE9A002904C1 /* PPAuthorizedRight.m in Sources */,
 				1C212B922002B1E500CBD8C9 /* PPProcessListWindowController.m in Sources */,
 				1C212B962002B54800CBD8C9 /* PPProcessListViewController.m in Sources */,
 				1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */,
@@ -279,6 +310,8 @@
 				1C212B882001C7BE00CBD8C9 /* PPProcessFetcher.m in Sources */,
 				1C212BAC2002C1D300CBD8C9 /* NSView+LayoutConstraints.m in Sources */,
 				1C212B8F2001D7B900CBD8C9 /* PPProcessManager.m in Sources */,
+				1C9A1C682003DE2F002904C1 /* PPAuthorizationManager.m in Sources */,
+				1C9A1C6E2003DE88002904C1 /* PPAuthorizedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +436,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PureProcessManager/Resources/PureProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVHW8QUG2S;
@@ -419,7 +451,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PureProcessManager/Resources/PureProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZVHW8QUG2S;

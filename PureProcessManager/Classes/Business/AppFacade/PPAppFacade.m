@@ -17,6 +17,8 @@
 
 @implementation PPAppFacade
 
+@dynamic processListUpdateRate;
+
 #pragma mark - Public
 
 + (instancetype)shared {
@@ -31,6 +33,18 @@
 - (void)startPeriodicProcessListUpdatesWithCompletion:(PPProcessListDidUpdateCompletion)completion {
     self.processListCompletion = completion;
     [self.processManager startUpdatingProcessList];
+}
+
+- (void)killProcess:(PPProcessInfo *)info completion:(PPErrorCompletion)completion {
+    [self.processManager killProcessWithInfo:info completion:completion];
+}
+
+- (void)setProcessListUpdateRate:(NSTimeInterval)processListUpdateRate {
+    self.processManager.updateInterval = processListUpdateRate;
+}
+
+- (NSTimeInterval)processListUpdateRate {
+    return self.processManager.updateInterval;
 }
 
 #pragma mark - PPProcessManagerDelegate

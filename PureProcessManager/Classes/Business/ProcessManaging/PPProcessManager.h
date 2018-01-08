@@ -7,6 +7,7 @@
 //
 
 #import "PPProcessInfo.h"
+#import "PPDefinitions.h"
 
 @class PPProcessManager;
 @protocol PPProcessManagerDelegate
@@ -22,6 +23,6 @@
 
 - (void)startUpdatingProcessList;
 - (void)stopUpdatingProcessList;
-- (void)killProcessWithInfo:(PPProcessInfo*)info;
+- (void)killProcessWithInfo:(PPProcessInfo*)info completion:(PPErrorCompletion)completion;
 
 @end

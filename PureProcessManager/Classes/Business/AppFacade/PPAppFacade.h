@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "PPProcessInfo.h"
+#import "PPDefinitions.h"
+
+#define AppFacadeShared [PPAppFacade shared]
 
 @class PPAppFacade;
 @protocol PPFacadeRetainable
@@ -18,8 +21,11 @@ typedef void(^PPProcessListDidUpdateCompletion)(NSArray<PPProcessInfo*> *process
 
 @interface PPAppFacade : NSObject
 
+@property (nonatomic, assign) NSTimeInterval processListUpdateRate;
+
 + (instancetype)shared;
 
 - (void)startPeriodicProcessListUpdatesWithCompletion:(PPProcessListDidUpdateCompletion)completion;
+- (void)killProcess:(PPProcessInfo*)info completion:(PPErrorCompletion)completion;
 
 @end

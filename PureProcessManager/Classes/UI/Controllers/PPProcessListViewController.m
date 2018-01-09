@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AppFacadeShared.processListUpdateRate = 10;
     [AppFacadeShared startPeriodicProcessListUpdatesWithCompletion:^(NSArray<PPProcessInfo *> *processList) {
         self.datasourceController.content = processList.mutableCopy;
     }];

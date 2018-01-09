@@ -16,7 +16,17 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount);
 
 @implementation PPProcessFetcher
 
-+ (NSArray<PPProcessInfo *> *)fetchAllSystemProcesses {
++ (NSArray<PPProcessInfo *> *)fetchProcessesForOwnerOnly:(BOOL)ownerOnly {
+    NSString *ownerName = nil;
+    if (ownerOnly) {
+        ownerName = NSUserName();
+    }
+    return [self fetchProcessesWithOwnerName:ownerName];
+}
+
+#pragma mark - Private
+
++ (NSArray<PPProcessInfo *> *)fetchProcessesWithOwnerName:(NSString*)ownerName {
     kinfo_proc *processList = NULL;
     size_t processCount = 0;
     GetBSDProcessList(&processList, &processCount);
@@ -24,6 +34,12 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount);
     for (int i = 0; i < processCount; i++) {
         kinfo_proc *process = &processList[i];
         PPProcessInfo *processInfo = [PPProcessInfo new];
+        struct passwd *owner = getpwuid(process->kp_eproc.e_ucred.cr_uid);
+        processInfo.ownerName = [NSString stringWithUTF8String:owner->pw_name];
+        if (ownerName && ![ownerName isEqualToString:processInfo.ownerName]) {
+            continue;
+        }
+        
         int processID = process->kp_proc.p_pid;
         processInfo.processID = [NSNumber numberWithInt:processID];
         // At first a process name is being evaluated by its path. This approach is used because a BSD info structure has only 17 chars to write a process name to, and it often gets truncated
@@ -38,8 +54,6 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount);
             processInfo.processName = [NSString stringWithUTF8String:process->kp_proc.p_comm];
         }
         free(bufferProcPath);
-        struct passwd *owner = getpwuid(process->kp_eproc.e_ucred.cr_uid);
-        processInfo.ownerName = [NSString stringWithUTF8String:owner->pw_name];
         [allProcessesInfo addObject:processInfo];
     }
     free(processList);

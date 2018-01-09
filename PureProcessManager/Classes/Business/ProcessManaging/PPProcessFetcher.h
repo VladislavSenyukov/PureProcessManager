@@ -11,6 +11,6 @@
 
 @interface PPProcessFetcher : NSObject
 
-+ (NSArray<PPProcessInfo*>*)fetchAllSystemProcesses;
++ (NSArray<PPProcessInfo *> *)fetchProcessesForOwnerOnly:(BOOL)ownerOnly;
 
 @end

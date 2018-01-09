@@ -11,6 +11,9 @@
 
 typedef void(^PPErrorCompletion)(NSError *error);
 
+static NSTimeInterval const PPProcessListDefaultUpdateRate = 3.0;
+static BOOL const PPProcessListDefaultShowOwnersProcessesOnly = NO;
+
 static NSErrorDomain const PPAuthorizationErrorDomain = @"PPAuthorizationErrorDomain";
 static NSErrorDomain const PPAuthorizedTaskErrorDomain = @"PPAuthorizedTaskErrorDomain";
 

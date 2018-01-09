@@ -24,7 +24,7 @@
 
 - (instancetype)init {
     self = [super init];
-    _updateInterval = 3.0;
+    _updateInterval = PPProcessListDefaultUpdateRate;
     _callbackQueue = dispatch_get_main_queue();
     _managerQueue = dispatch_queue_create("com.ruckef.PPProcessManager", DISPATCH_QUEUE_SERIAL);
     _authManager = [PPAuthorizationManager new];
@@ -82,11 +82,14 @@
 #pragma mark - Private
 
 - (void)startUpdateTimerWithInterval:(NSTimeInterval)interval {
-        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:interval
-                                                            target:self
-                                                          selector:@selector(fetchProcessList)
-                                                          userInfo:nil
-                                                           repeats:YES];
+    if (!interval) {
+        interval = PPProcessListDefaultUpdateRate;
+    }
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:interval
+                                                        target:self
+                                                      selector:@selector(fetchProcessList)
+                                                      userInfo:nil
+                                                       repeats:YES];
 }
 
 - (void)stopUpdateTimer {
@@ -95,7 +98,7 @@
 
 - (void)fetchProcessList {
     dispatch_async(self.managerQueue, ^{
-        NSArray *list = [PPProcessFetcher fetchAllSystemProcesses];
+        NSArray *list = [PPProcessFetcher fetchProcessesForOwnerOnly:self.showOwnerProcessesOnly];
         dispatch_async(self.callbackQueue, ^{
             if ([self.delegate respondsToSelector:@selector(processManager:didUpdateWithProcessList:)]) {
                 [self.delegate processManager:self didUpdateWithProcessList:list];

@@ -18,6 +18,7 @@
 @interface PPProcessManager : NSObject
 
 @property (nonatomic, weak) NSObject <PPProcessManagerDelegate> *delegate;
+@property (nonatomic, assign) BOOL showOwnerProcessesOnly;
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 @property (nonatomic, assign) dispatch_queue_t callbackQueue;
 

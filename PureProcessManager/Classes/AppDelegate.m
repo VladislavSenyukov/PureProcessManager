@@ -10,21 +10,12 @@
 #import "PPProcessListWindowController.h"
 
 @interface AppDelegate ()
-@property (nonatomic, weak) IBOutlet NSWindow *window;
 @property (nonatomic, strong) IBOutlet PPProcessListWindowController *processListWC;
 @end
 
 @implementation AppDelegate
 
 @synthesize facade = _facade;
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
-}
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-
-}
 
 #pragma mark - PPAppFacadeRetainable
 

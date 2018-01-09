@@ -23,7 +23,27 @@
 		1C9A1C682003DE2F002904C1 /* PPAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C672003DE2F002904C1 /* PPAuthorizationManager.m */; };
 		1C9A1C6E2003DE88002904C1 /* PPAuthorizedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C6D2003DE88002904C1 /* PPAuthorizedTask.m */; };
 		1C9A1C712003DE9A002904C1 /* PPAuthorizedRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C702003DE9A002904C1 /* PPAuthorizedRight.m */; };
+		1C9A1C7C2003FA23002904C1 /* PureProcessManagerPrefPane.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C9A1C7B2003FA23002904C1 /* PureProcessManagerPrefPane.h */; };
+		1C9A1C7E2003FA23002904C1 /* PureProcessManagerPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C7D2003FA23002904C1 /* PureProcessManagerPrefPane.m */; };
+		1C9A1C802003FA23002904C1 /* PureProcessManagerPrefPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1C9A1C7F2003FA23002904C1 /* PureProcessManagerPrefPane.tiff */; };
+		1C9A1C832003FA23002904C1 /* PureProcessManagerPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C9A1C812003FA23002904C1 /* PureProcessManagerPrefPane.xib */; };
+		1C9A1C892004167E002904C1 /* PureProcessManagerPrefPane.prefPane in Resources */ = {isa = PBXBuildFile; fileRef = 1C9A1C792003FA23002904C1 /* PureProcessManagerPrefPane.prefPane */; };
+		1C9A1C8E20042512002904C1 /* PPIntegerFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C9A1C8C20042512002904C1 /* PPIntegerFormatter.h */; };
+		1C9A1C8F20042512002904C1 /* PPIntegerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C8D20042512002904C1 /* PPIntegerFormatter.m */; };
+		1C9A1C9320042DAA002904C1 /* PPSettingsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C9A1C9120042DAA002904C1 /* PPSettingsManager.h */; };
+		1C9A1C9420042DAA002904C1 /* PPSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C9220042DAA002904C1 /* PPSettingsManager.m */; };
+		1C9A1C9520042DAA002904C1 /* PPSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A1C9220042DAA002904C1 /* PPSettingsManager.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C9A1C8A200423C2002904C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C212B562001BBF800CBD8C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C9A1C782003FA23002904C1;
+			remoteInfo = PureProcessManagerPrefPane;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C212B5E2001BBF800CBD8C9 /* PureProcessManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureProcessManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,10 +79,27 @@
 		1C9A1C6F2003DE9A002904C1 /* PPAuthorizedRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAuthorizedRight.h; sourceTree = "<group>"; };
 		1C9A1C702003DE9A002904C1 /* PPAuthorizedRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAuthorizedRight.m; sourceTree = "<group>"; };
 		1C9A1C732003E5A8002904C1 /* PPDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDefinitions.h; sourceTree = "<group>"; };
+		1C9A1C792003FA23002904C1 /* PureProcessManagerPrefPane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureProcessManagerPrefPane.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9A1C7B2003FA23002904C1 /* PureProcessManagerPrefPane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureProcessManagerPrefPane.h; sourceTree = "<group>"; };
+		1C9A1C7D2003FA23002904C1 /* PureProcessManagerPrefPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PureProcessManagerPrefPane.m; sourceTree = "<group>"; };
+		1C9A1C7F2003FA23002904C1 /* PureProcessManagerPrefPane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PureProcessManagerPrefPane.tiff; sourceTree = "<group>"; };
+		1C9A1C822003FA23002904C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PureProcessManagerPrefPane.xib; sourceTree = "<group>"; };
+		1C9A1C842003FA23002904C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9A1C8C20042512002904C1 /* PPIntegerFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPIntegerFormatter.h; sourceTree = "<group>"; };
+		1C9A1C8D20042512002904C1 /* PPIntegerFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPIntegerFormatter.m; sourceTree = "<group>"; };
+		1C9A1C9120042DAA002904C1 /* PPSettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSettingsManager.h; sourceTree = "<group>"; };
+		1C9A1C9220042DAA002904C1 /* PPSettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSettingsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1C212B5B2001BBF800CBD8C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9A1C752003FA23002904C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				1C212B602001BBF800CBD8C9 /* PureProcessManager */,
+				1C9A1C7A2003FA23002904C1 /* PureProcessManagerPrefPane */,
 				1C212B5F2001BBF800CBD8C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				1C212B5E2001BBF800CBD8C9 /* PureProcessManager.app */,
+				1C9A1C792003FA23002904C1 /* PureProcessManagerPrefPane.prefPane */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +156,7 @@
 				1C212B842001C79700CBD8C9 /* AppFacade */,
 				1C9A1C652003DDD7002904C1 /* AuthorizedTasksManaging */,
 				1C212B852001C79700CBD8C9 /* ProcessManaging */,
+				1C9A1C9020042D87002904C1 /* SettingManager */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -194,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				1C212BA52002C1D300CBD8C9 /* Autolayout */,
+				1C9A1C8C20042512002904C1 /* PPIntegerFormatter.h */,
+				1C9A1C8D20042512002904C1 /* PPIntegerFormatter.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -223,7 +265,41 @@
 			path = AuthorizedTasksManaging;
 			sourceTree = "<group>";
 		};
+		1C9A1C7A2003FA23002904C1 /* PureProcessManagerPrefPane */ = {
+			isa = PBXGroup;
+			children = (
+				1C9A1C7B2003FA23002904C1 /* PureProcessManagerPrefPane.h */,
+				1C9A1C7D2003FA23002904C1 /* PureProcessManagerPrefPane.m */,
+				1C9A1C7F2003FA23002904C1 /* PureProcessManagerPrefPane.tiff */,
+				1C9A1C812003FA23002904C1 /* PureProcessManagerPrefPane.xib */,
+				1C9A1C842003FA23002904C1 /* Info.plist */,
+			);
+			path = PureProcessManagerPrefPane;
+			sourceTree = "<group>";
+		};
+		1C9A1C9020042D87002904C1 /* SettingManager */ = {
+			isa = PBXGroup;
+			children = (
+				1C9A1C9120042DAA002904C1 /* PPSettingsManager.h */,
+				1C9A1C9220042DAA002904C1 /* PPSettingsManager.m */,
+			);
+			path = SettingManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C9A1C762003FA23002904C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9A1C8E20042512002904C1 /* PPIntegerFormatter.h in Headers */,
+				1C9A1C9320042DAA002904C1 /* PPSettingsManager.h in Headers */,
+				1C9A1C7C2003FA23002904C1 /* PureProcessManagerPrefPane.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1C212B5D2001BBF800CBD8C9 /* PureProcessManager */ = {
@@ -237,11 +313,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				1C9A1C8B200423C2002904C1 /* PBXTargetDependency */,
 			);
 			name = PureProcessManager;
 			productName = PureProcessManager;
 			productReference = 1C212B5E2001BBF800CBD8C9 /* PureProcessManager.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1C9A1C782003FA23002904C1 /* PureProcessManagerPrefPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9A1C852003FA23002904C1 /* Build configuration list for PBXNativeTarget "PureProcessManagerPrefPane" */;
+			buildPhases = (
+				1C9A1C742003FA23002904C1 /* Sources */,
+				1C9A1C752003FA23002904C1 /* Frameworks */,
+				1C9A1C762003FA23002904C1 /* Headers */,
+				1C9A1C772003FA23002904C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureProcessManagerPrefPane;
+			productName = PureProcessManagerPrefPane;
+			productReference = 1C9A1C792003FA23002904C1 /* PureProcessManagerPrefPane.prefPane */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -256,10 +351,17 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
 						};
+					};
+					1C9A1C782003FA23002904C1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -277,6 +379,7 @@
 			projectRoot = "";
 			targets = (
 				1C212B5D2001BBF800CBD8C9 /* PureProcessManager */,
+				1C9A1C782003FA23002904C1 /* PureProcessManagerPrefPane */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +392,16 @@
 				1C212B812001C58900CBD8C9 /* Assets.xcassets in Resources */,
 				1C212B972002B54800CBD8C9 /* PPProcessListViewController.xib in Resources */,
 				1C212B822001C58900CBD8C9 /* MainMenu.xib in Resources */,
+				1C9A1C892004167E002904C1 /* PureProcessManagerPrefPane.prefPane in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9A1C772003FA23002904C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9A1C832003FA23002904C1 /* PureProcessManagerPrefPane.xib in Resources */,
+				1C9A1C802003FA23002904C1 /* PureProcessManagerPrefPane.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +414,7 @@
 			files = (
 				1C212B6B2001BBF800CBD8C9 /* main.m in Sources */,
 				1C9A1C712003DE9A002904C1 /* PPAuthorizedRight.m in Sources */,
+				1C9A1C9420042DAA002904C1 /* PPSettingsManager.m in Sources */,
 				1C212B922002B1E500CBD8C9 /* PPProcessListWindowController.m in Sources */,
 				1C212B962002B54800CBD8C9 /* PPProcessListViewController.m in Sources */,
 				1C212B8C2001C7EF00CBD8C9 /* PPProcessInfo.m in Sources */,
@@ -315,7 +429,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1C9A1C742003FA23002904C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9A1C7E2003FA23002904C1 /* PureProcessManagerPrefPane.m in Sources */,
+				1C9A1C9520042DAA002904C1 /* PPSettingsManager.m in Sources */,
+				1C9A1C8F20042512002904C1 /* PPIntegerFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C9A1C8B200423C2002904C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C9A1C782003FA23002904C1 /* PureProcessManagerPrefPane */;
+			targetProxy = 1C9A1C8A200423C2002904C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1C212B7D2001C58900CBD8C9 /* MainMenu.xib */ = {
@@ -324,6 +456,14 @@
 				1C212B7E2001C58900CBD8C9 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		1C9A1C812003FA23002904C1 /* PureProcessManagerPrefPane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9A1C822003FA23002904C1 /* Base */,
+			);
+			name = PureProcessManagerPrefPane.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +602,34 @@
 			};
 			name = Release;
 		};
+		1C9A1C862003FA23002904C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVHW8QUG2S;
+				INFOPLIST_FILE = PureProcessManagerPrefPane/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckef.PureProcessManagerPrefPane;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		1C9A1C872003FA23002904C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVHW8QUG2S;
+				INFOPLIST_FILE = PureProcessManagerPrefPane/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckef.PureProcessManagerPrefPane;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +647,15 @@
 			buildConfigurations = (
 				1C212B702001BBF800CBD8C9 /* Debug */,
 				1C212B712001BBF800CBD8C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9A1C852003FA23002904C1 /* Build configuration list for PBXNativeTarget "PureProcessManagerPrefPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9A1C862003FA23002904C1 /* Debug */,
+				1C9A1C872003FA23002904C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

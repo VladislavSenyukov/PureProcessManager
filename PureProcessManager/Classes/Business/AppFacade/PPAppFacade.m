@@ -9,15 +9,15 @@
 #import "PPAppFacade.h"
 #import <AppKit/AppKit.h>
 #import "PPProcessManager.h"
+#import "PPSettingsManager.h"
 
 @interface PPAppFacade() <PPProcessManagerDelegate>
 @property (nonatomic, strong) PPProcessManager *processManager;
+@property (nonatomic, strong) PPSettingsManager *settingsManager;
 @property (nonatomic, copy) PPProcessListDidUpdateCompletion processListCompletion;
 @end
 
 @implementation PPAppFacade
-
-@dynamic processListUpdateRate;
 
 #pragma mark - Public
 
@@ -39,12 +39,17 @@
     [self.processManager killProcessWithInfo:info completion:completion];
 }
 
-- (void)setProcessListUpdateRate:(NSTimeInterval)processListUpdateRate {
-    self.processManager.updateInterval = processListUpdateRate;
-}
+#pragma mark - Overrides
 
-- (NSTimeInterval)processListUpdateRate {
-    return self.processManager.updateInterval;
+- (instancetype)init {
+    self = [super init];
+    _settingsManager = [PPSettingsManager new];
+    _processManager = [PPProcessManager new];
+    _processManager.delegate = self;
+    _processManager.updateInterval = _settingsManager.updateRate;
+    _processManager.showOwnerProcessesOnly = _settingsManager.showOwnerProcessesOnly;
+    [self copyPrefPaneToPanesDirectoryIfNeeded];
+    return self;
 }
 
 #pragma mark - PPProcessManagerDelegate
@@ -55,14 +60,18 @@
     }
 }
 
-#pragma mark - Accessors
+#pragma mark - Private
 
-- (PPProcessManager *)processManager {
-    if (!_processManager) {
-        _processManager = [PPProcessManager new];
-        _processManager.delegate = self;
-    }
-    return _processManager;
+- (void)copyPrefPaneToPanesDirectoryIfNeeded {
+    NSString *panesDirectory = NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *paneBundlePath = [[NSBundle mainBundle] pathForResource:@"PureProcessManagerPrefPane" ofType:@"prefPane"];
+    NSString *paneFilename = paneBundlePath.lastPathComponent;
+    NSString *panePath = [panesDirectory stringByAppendingPathComponent:paneFilename];
+    NSFileManager *fm = [NSFileManager defaultManager];
+//    if (![fm fileExistsAtPath:panePath]) {
+    [fm removeItemAtPath:panePath error:nil];
+        [fm copyItemAtPath:paneBundlePath toPath:panePath error:nil];
+//    }
 }
 
 @end

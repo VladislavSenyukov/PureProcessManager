@@ -78,10 +78,9 @@
     NSString *paneFilename = paneBundlePath.lastPathComponent;
     NSString *panePath = [panesDirectory stringByAppendingPathComponent:paneFilename];
     NSFileManager *fm = [NSFileManager defaultManager];
-//    if (![fm fileExistsAtPath:panePath]) {
-    [fm removeItemAtPath:panePath error:nil];
+    if (![fm fileExistsAtPath:panePath]) {
         [fm copyItemAtPath:paneBundlePath toPath:panePath error:nil];
-//    }
+    }
 }
 
 - (void)updateProcessManager:(PPProcessManager*)manager withSettings:(PPSettingsManager*)settings {

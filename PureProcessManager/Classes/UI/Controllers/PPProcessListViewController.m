@@ -26,25 +26,41 @@
 }
 
 - (IBAction)killProcessSelected:(NSNumber*)selectionIdx {
-    NSUInteger idx = selectionIdx.unsignedIntegerValue;
-    PPProcessInfo *selectedInfo = [self.datasourceController.content objectAtIndex:idx];
-    [AppFacadeShared killProcess:selectedInfo completion:^(NSError *error) {
-        if (!error) {
-            [self.datasourceController removeObject:selectedInfo];
-        } else {
-            [self showAlertWithError:error];
+    PPProcessInfo *selectedInfo = [self.datasourceController.content objectAtIndex:selectionIdx.unsignedIntegerValue];
+    [self killProcessWithInfo:selectedInfo];
+}
+
+- (void)keyDown:(NSEvent *)event {
+    NSUInteger selectionIdx = self.datasourceController.selectionIndex;
+    if (selectionIdx != NSNotFound &&
+        [[event charactersIgnoringModifiers] characterAtIndex:0] == NSDeleteCharacter) {
+        PPProcessInfo *selectedInfo = [self.datasourceController.content objectAtIndex:selectionIdx];
+        NSAlert *alert = [NSAlert new];
+        alert.messageText = @"Process kill";
+        alert.informativeText = [NSString stringWithFormat:@"Are you sure you want to kill %@?", selectedInfo.processName];
+        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:@"Cancel"];
+        NSModalResponse result = [alert runModal];
+        if (result == NSAlertFirstButtonReturn) {
+            [self killProcessWithInfo:selectedInfo];
         }
-    }];
+    }
 }
 
 #pragma mark - Private
 
-- (void)showAlertWithError:(NSError*)error {
-    NSAlert *alert = [NSAlert new];
-    alert.messageText = @"Error";
-    alert.informativeText = error.localizedDescription;
-    [alert addButtonWithTitle:@"OK"];
-    [alert runModal];
+- (void)killProcessWithInfo:(PPProcessInfo*)info {
+    [AppFacadeShared killProcess:info completion:^(NSError *error) {
+        if (!error) {
+            [self.datasourceController removeObject:info];
+        } else {
+            NSAlert *alert = [NSAlert new];
+            alert.messageText = @"Error";
+            alert.informativeText = error.localizedDescription;
+            [alert addButtonWithTitle:@"OK"];
+            [alert runModal];
+        }
+    }];
 }
 
 @end

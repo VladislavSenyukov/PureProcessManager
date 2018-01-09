@@ -10,6 +10,4 @@
 
 @interface PureProcessManagerPrefPane : NSPreferencePane
 
-- (void)mainViewDidLoad;
-
 @end

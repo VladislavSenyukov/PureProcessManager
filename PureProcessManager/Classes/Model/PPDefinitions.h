@@ -14,6 +14,8 @@ typedef void(^PPErrorCompletion)(NSError *error);
 static NSTimeInterval const PPProcessListDefaultUpdateRate = 3.0;
 static BOOL const PPProcessListDefaultShowOwnersProcessesOnly = NO;
 
+static NSNotificationName const PPPrefPaneSettingsDidUpdate = @"PPPrefPaneSettingsDidUpdate";
+
 static NSErrorDomain const PPAuthorizationErrorDomain = @"PPAuthorizationErrorDomain";
 static NSErrorDomain const PPAuthorizedTaskErrorDomain = @"PPAuthorizedTaskErrorDomain";
 

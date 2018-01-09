@@ -18,7 +18,7 @@
 
 @implementation PureProcessManagerPrefPane
 
-- (void)mainViewDidLoad {
+- (void)willSelect {
     self.updateRateField.formatter = [PPIntegerFormatter new];
     PPSettingsManager *settings = [PPSettingsManager new];
     self.showOwnerProcessesCheckbox.state = settings.showOwnerProcessesOnly;
@@ -34,16 +34,6 @@
     if (notification.object == self.updateRateField) {
         self.settings.updateRate = [self.updateRateField.stringValue doubleValue];
     }
-}
-
-#pragma mark - Private
-
-- (void)logMessage:(NSString*)message {
-    NSAlert *alert = [NSAlert new];
-    alert.messageText = @"info";
-    alert.informativeText = message;
-    [alert addButtonWithTitle:@"OK"];
-    [alert runModal];
 }
 
 @end

@@ -47,6 +47,8 @@
     BOOL show = PPProcessListDefaultShowOwnersProcessesOnly;
     if (value && CFGetTypeID(value) == CFBooleanGetTypeID()) {
         show = CFBooleanGetValue(value);
+    }
+    if (value) {
         CFRelease(value);
     }
     _showOwnerProcessesOnly = show;
@@ -57,6 +59,8 @@
     NSTimeInterval updateRate = 0;
     if (value && CFGetTypeID(value) == CFStringGetTypeID()) {
         updateRate = [(__bridge NSString*)value doubleValue];
+    }
+    if (value) {
         CFRelease(value);
     }
     if (!updateRate) {
@@ -70,6 +74,8 @@
     CFStringRef appId = [self appId];
     CFPreferencesSetAppValue(key, value, appId);
     CFPreferencesAppSynchronize(appId);
+    
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:PPPrefPaneSettingsDidUpdate object:nil userInfo:nil deliverImmediately:YES];
 }
 
 - (CFStringRef)appId {
